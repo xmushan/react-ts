@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { useEffect, useState } from 'react';
+import Demo from './page/demo'
+import {store} from './redux/store'
+import Hoc from './components/Hoc'
+function App(props: any) {
+  const { num } = store.getState()
+  const [currentNum,setCurrentNum] = useState<number | string>(num)
+  useEffect(() => {
+    store.dispatch({
+      type: 'change',
+      params: {
+        num: 1
+      }
+    })
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Demo/>
+      <Hoc message='newMsg'/>
     </div>
   );
 }
