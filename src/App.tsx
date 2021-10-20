@@ -4,6 +4,8 @@ import {
   Route,
 } from "react-router-dom";
 import Foo from './page/foo'
+
+
 const App = () => {
   return (
     <Router>

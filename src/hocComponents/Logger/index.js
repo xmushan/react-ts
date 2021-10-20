@@ -4,7 +4,6 @@ function LogHoc(WrappedComponent){
         componentWillMount(){
             this.start = Date.now();
         }
-        co
         componentDidMount(){
             this.end = Date.now();
             console.log(`${WrappedComponent.dispalyName} 渲染时间：${this.end - this.start} ms`);
