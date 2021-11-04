@@ -3,17 +3,15 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Foo from './page/foo'
-
-
+import routes from './routes'
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route path="/foo">
-          <Foo />
-        </Route>
-      </Switch>
+      {
+        routes.map( (params,index) => <Switch key={index}>
+          <Route {...params}/>
+        </Switch>)
+      }
     </Router>
   )
 }

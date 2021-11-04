@@ -16,11 +16,14 @@ const ImageView: React.FC<ImageViewProps> = props => {
     const { src,errMessage,emptyMessage,loading } = props
     const [status,setStatus] = useState<'success'|'failed'|'loading'>('loading')
 
-    useEffect(()=>{
+    // useEffect(()=>{
         
-    },[src])
+    // },[src])
     return (
-        <img/>
+        <img
+            src={src}
+            
+        />
     )
 }
 
