@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import routes from './routes'
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
           <Route {...params}/>
         </Switch>)
       }
+      <Redirect from='/' to='/from' />;
     </Router>
   )
 }
