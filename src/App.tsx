@@ -13,7 +13,6 @@ const App = () => {
           <Route {...params}/>
         </Switch>)
       }
-      <Redirect from='/' to='/from' />;
     </Router>
   )
 }
