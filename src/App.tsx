@@ -5,6 +5,11 @@ import {
   Redirect,
 } from "react-router-dom";
 import routes from './routes'
+/**
+ * 
+ * @returns 123123
+ * 123123
+ */
 const App = () => {
   return (
     <Router>
